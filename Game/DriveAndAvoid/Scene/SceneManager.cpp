@@ -87,7 +87,7 @@ void SceneManager::Update()
 		}
 
 		//ESCAPEキーが押されたら、ゲームを終了する
-		if (CheckHitkey(KEY_INPUT_ESCAPE) || InputControl::GetButtonUp(XINPUT_BUTTON_BACK))
+		if (CheckHitKey(KEY_INPUT_ESCAPE) || InputControl::GetButtonUp(XINPUT_BUTTON_BACK))
 		{
 			break;
 		}

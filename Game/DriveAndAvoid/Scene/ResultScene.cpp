@@ -44,6 +44,7 @@ void ResultScene::Initialize()
 eSceneType ResultScene::Update()
 {
 	//Bボタンでランキングに
+	if(InputControl::GetButtonDown(XINPUT_BUTTON_B))
 	{
 		return eSceneType::E_RANKING_INPUT;
 	}
@@ -55,7 +56,7 @@ eSceneType ResultScene::Update()
 void ResultScene::Draw() const
 {
 	//背景画像を描画
-	DrawGraph(0.0,back_ground, TRUE);
+	DrawGraph(0.0, back_ground, TRUE);
 
 	//スコア等表示領域
 	DrawBox(150, 150, 490, 330, GetColor(0, 153, 0), TRUE);
