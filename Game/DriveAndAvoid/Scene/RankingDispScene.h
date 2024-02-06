@@ -8,7 +8,7 @@ class RankingDispScene : public SceneBase
 private:
 
 private:
-	int backGround_image; //”wŒi‰æ‘œ
+	int background_image; //”wŒi‰æ‘œ
 	RankingData* ranking; //ƒ‰ƒ“ƒLƒ“ƒOî•ñ
 
 public:

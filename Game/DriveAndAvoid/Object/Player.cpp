@@ -1,13 +1,13 @@
 #include "Player.h"
 #include"../Utility/InputControl.h"
-#include"DxLib.h"
+#include"Dxlib.h"
 
-Player::player() : is_active(false), image(NULL), lovation(0.0f), box_size(0.0f), angle(0.0f), speed(0.0f), hp(0.0f), fuel(0.0f), barrier_count(0), barrier(nullptr)
+Player::Player() : is_active(false), image(NULL), location(0.0f), box_size(0.0f), angle(0.0f), speed(0.0f), hp(0.0f), fuel(0.0f), barrier_count(0), barrier(nullptr)
 {
 
 }
 
-player::~Player()
+Player::~Player()
 {
 
 }
@@ -25,17 +25,17 @@ void Player::Initialize()
 	barrier_count = 3;
 
 	//画像読み込み
-	image = loadGraph("Resource/images/car1pol.bmp");
+	image = LoadGraph("Resource/images/car1pol.bmp");
 
 	//エラーチェック
 	if (image == -1)
 	{
-		throw("Resouce/images/car1pol.bmpがありません\n");
+		throw("Resource/images/car1pol.bmpがありません\n");
 	}
 }
 
 //更新処理
-void Player::update()
+void Player::Update()
 {
 	//操作不可能状態であれば、自信を回転させる
 	if (!is_active)
@@ -115,17 +115,17 @@ void Player::Finalize()
 //状態設定処理
 void Player::SetActive(bool flg)
 {
-	this->is_ative = flg;
+	this->is_active = flg;
 }
 
 //体力減少処理
-void Player::DecreaseHp(float Value)
+void Player::DecreaseHp(float value)
 {
 	this->hp += value;
 }
 
 //位置情報取得処理
-Vector2D Player::Getlocation() const
+Vector2D Player::GetLocation() const
 {
 	return this->location;
 }

@@ -147,7 +147,7 @@ void GameMainScene::Draw() const
 	DrawFormatString(510, 240, GetColor(0, 0, 0), "スピード");
 	DrawFormatString(555, 260, GetColor(255, 255, 255), "%08.1f", player->GetSpeed());
 
-}//バリアの枚数の描画
+//バリアの枚数の描画
 for (int i = 0; i < player->GetBarriarCount(); i++) {
 	DrawRotaGraph(520, +i * 25, 340, 0.2f, 0, barrier_image, TRUE, FALSE);
 }
@@ -156,7 +156,7 @@ for (int i = 0; i < player->GetBarriarCount(); i++) {
 float fx = 510.0f;
 float fy = 390.0f;
 DrawFormatStringF(fx, fy, GetColor(0, 0, 0), "FUFL METER");
-DrawBoxAA(fx, fy + 20.0f, fx + (player->GetFUEL() * 100 / 20000), fy + 40.0f, GetColor(0, 102, 204), TRUE);
+DrawBoxAA(fx, fy + 20.0f, fx + (player->GetFuel() * 100 / 20000), fy + 40.0f, GetColor(0, 102, 204), TRUE);
 DrawBoxAA(fx, fy + 20.0f, fx + 100.0f, fy + 40.0f, GetColor(0, 0, 0), FALSE);
 
 //体力ゲージの描画

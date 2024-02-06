@@ -28,7 +28,7 @@ void InputControl::Update()
 	//左スティック入力値の更新(-1.0～1.0fに範囲を制限する)
 	if (input_state.ThumbLX > 0.0f)
 	{
-		stick[0].x = (float)input_state.ThumbLX / (float)SHRT_MAX);
+		stick[0].x = (float)input_state.ThumbLX / (float)SHRT_MAX;
 	}
 	else
 	{
@@ -46,13 +46,13 @@ void InputControl::Update()
 	//右スティック入力値更新(-1.0～1.0fに範囲を制限する)
 	if (input_state.ThumbRX > 0.0f)
 	{
-		stick[1].x = (float)input_state.ThumbRX / (floatSHRT_MAX);
+		stick[1].x = (float)input_state.ThumbRX / (float)SHRT_MAX;
 	}
 	else
 	{
 		stick[1].x = -((float)input_state.ThumbRX / (float)SHRT_MIN);
 	}
-	if (Inout_state.ThumbRY > 0.0f)
+	if (input_state.ThumbRY > 0.0f)
 	{
 		stick[1].y = (float)input_state.ThumbRY / (float)SHRT_MAX;
 	}
@@ -99,7 +99,7 @@ Vector2D InputControl::GetLeftStick()
 }
 
 //右スティック取得
-Vector2D InputContol::GetRightStick()
+Vector2D InputControl::GetRightStick()
 {
 	return stick[1];
 }

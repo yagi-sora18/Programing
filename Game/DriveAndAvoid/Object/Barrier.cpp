@@ -14,7 +14,7 @@ Barrier::Barrier() : image(NULL), life_span(1000)
 	}
 }
 
-Barrier::Barrier()
+Barrier::~Barrier()
 {
 //“Ç‚İ‚ñ‚¾‰æ‘œ‚ğíœ
 	DeleteGraph(image);

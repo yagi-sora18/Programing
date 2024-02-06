@@ -26,7 +26,7 @@ public:
 	{
 		return GetNowScene();
 	}
-	//XVˆ—
+	//•`‰æˆ—
 	virtual void Draw() const {}
 	//I—¹ˆ—
 	virtual void Finalize() {}

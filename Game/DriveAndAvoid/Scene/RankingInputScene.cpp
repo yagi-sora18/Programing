@@ -1,5 +1,5 @@
 #include "RankingInputScene.h"
-#include"../Utility/InputCntrol.h"
+#include"../Utility/InputControl.h"
 #include"DxLib.h"
 
 RankingInputScene::RankingInputScene() : background_image(NULL), ranking(nullptr), score(0), name_num(0), cursor_x(0), cursor_y(0)
@@ -100,13 +100,13 @@ void RankingInputScene::Draw() const
 		int y = (i / 13) * font_size + 300;
 		DrawFormatString(x, y, GetColor(255, 255, 255), "%-3c", 'a' + i);
 		y = ((i / 13) + 2) * font_size + 300;
-		DrawFormatString(100, 220, GetColor(255, 255, 255), "%-3c", 'A' + i);
+		DrawFormatString(x, y, GetColor(255, 255, 255), "%-3c", 'A' + i);
 	}
 	DrawString(40, 405, "決定", GetColor(255, 255, 255));
-	DrawString(40, + font_size * 2,405,"消す", GetColor(255, 255, 255));
+	DrawString(40 + font_size * 2, 405, "消す", GetColor(255, 255, 255));
 
 	//選択文字をフォーカスする
-	if (cursor_y4)
+	if (cursor_y < 4)
 	{
 		int x = cursor_x * font_size + 10;
 		int y = cursor_y * font_size + 295;
@@ -129,7 +129,7 @@ void RankingInputScene::Draw() const
 void RankingInputScene::Finalize()
 {
 	//ランキングにデータを格納
-	runking->SetRankingData(score, name);
+	ranking->SetRankingData(score, name);
 
 	//読み込んだ画像を削除
 	DeleteGraph(background_image);
@@ -170,7 +170,7 @@ bool RankingInputScene::InputName()
 			cursor_x = 0;
 		}
 	}
-	if (InputControl::GetButoonDown(XINPUT_BUTTON_DPAD_UP))
+	if (InputControl::GetButtonDown(XINPUT_BUTTON_DPAD_UP))
 	{
 		if (cursor_y > 0)
 		{

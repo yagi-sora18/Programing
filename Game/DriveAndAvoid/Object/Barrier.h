@@ -6,7 +6,7 @@ class Barrier
 {
 private:
 	int image;       //バリア画像
-	float life_spamn;//バリアの寿命
+	float life_span;//バリアの寿命
 
 public:
 	Barrier();

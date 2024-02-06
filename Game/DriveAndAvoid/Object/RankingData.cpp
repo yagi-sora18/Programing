@@ -1,4 +1,4 @@
-#include "Ranking.h"
+#include "RankingData.h"
 #include<stdio.h>
 #include<string.h>
 
