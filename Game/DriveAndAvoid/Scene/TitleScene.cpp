@@ -27,7 +27,7 @@ void TitleScene::Initialize()
 	}
 	if (menu_image == -1)
 	{
-		throw("Resource/images/Title.bmpがありません\n");
+		throw("Resource/images/menu.bmpがありません\n");
 	}
 	if (cursor_image == -1)
 	{
@@ -38,6 +38,7 @@ void TitleScene::Initialize()
 //更新処理
 eSceneType TitleScene::Update()
 {
+	//カーソル下移動
 	if (InputControl::GetButtonDown(XINPUT_BUTTON_DPAD_DOWN))
 	{
 		menu_cursor++;

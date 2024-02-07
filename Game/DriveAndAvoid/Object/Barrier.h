@@ -12,7 +12,7 @@ public:
 	Barrier();
 	~Barrier();
 
-	void Draw(const Vector2D& location);//‰æ‘œˆ—
+	void Draw(const Vector2D& location);//•`‰æˆ—
 	bool IsFinished(float speed);     //õ–½‚ªs‚«‚½‚©H
 };
 

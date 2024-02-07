@@ -16,7 +16,7 @@ HelpScene::~HelpScene()
 void HelpScene::Initialize()
 {
 	//画像読み込み
-	background_image = LoadGraph("Resource/image/Title.bmp");
+	background_image = LoadGraph("Resource/images/Title.bmp");
 
 	//エラーチェック
 	if (background_image == -1)
