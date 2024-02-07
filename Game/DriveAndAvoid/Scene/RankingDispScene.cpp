@@ -45,7 +45,7 @@ eSceneType RankingDispScene::Update()
 void RankingDispScene::Draw() const
 {
 	//背景画像の描画
-	DrawGraph(0.0, background_image, FALSE);
+	DrawGraph(0,0, background_image, FALSE);
 
 	//取得したランキングデータを描画する
 	for (int i = 0; i < 5; i++)
@@ -67,9 +67,9 @@ void RankingDispScene::Finalize()
 }
 
 //現在シーン情報を取得
-SceneType RankingDispScene::GetNowScene() const
+eSceneType RankingDispScene::GetNowScene() const
 {
-	return eSceneType;; E_RANKING_DISP;
+	return eSceneType::E_RANKING_DISP;
 }
 
 

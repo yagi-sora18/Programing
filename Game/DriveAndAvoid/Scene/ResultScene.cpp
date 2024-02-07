@@ -56,7 +56,7 @@ eSceneType ResultScene::Update()
 void ResultScene::Draw() const
 {
 	//”wŒi‰æ‘œ‚ð•`‰æ
-	DrawGraph(0.0, back_ground, TRUE);
+	DrawGraph(0,0, back_ground, TRUE);
 
 	//ƒXƒRƒA“™•\Ž¦—Ìˆæ
 	DrawBox(150, 150, 490, 330, GetColor(0, 153, 0), TRUE);

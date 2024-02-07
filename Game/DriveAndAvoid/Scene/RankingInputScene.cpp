@@ -21,21 +21,6 @@ void RankingInputScene::Initialize()
 	//エラーチェック
 	if (background_image == -1)
 	{
-		throw("Resource/image/Ranking.bmpがありません\n");
-	}
-
-	//メモリの動的確保
-	ranking = new RankingData;
-	ranking->Initialize();
-
-	//リザルトデータを取得する
-	FILE* fp = nullptr;
-	//ファイルオープン
-	errno_t result = fopen_s(&fp, "Resource/dat/resilt_data.csv", "r");
-
-	//エラーチェック
-	if (background_image == -1)
-	{
 		throw("Resource/images/Ranking.bmpがありません\n");
 	}
 
@@ -88,7 +73,7 @@ void RankingInputScene::Draw() const
 	DrawGraph(0, 0, background_image, TRUE);
 
 	//名前入力指示文字列の描画
-	DrawString(150, 100, "ランキングに登録します", 0xffffff);
+	DrawString(150, 100, "ランキングに登録します", 0xFFFFFF);
 	DrawFormatString(100, 220, GetColor(255, 255, 255), ">%s", name);
 
 
